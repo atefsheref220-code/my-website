@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>PES "A" — عبدالرحمن جيمنج</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main id="gate" class="screen">
+  <section class="gate">
+    <img src="logo.png" class="logo" alt="PES A">
+    <b class="tag">PES "A"</b>
+    <h1>أهلاً بيك في PES "A"</h1>
+    <div class="sub">عبدالرحمن جيمنج</div>
+    <p>اشترك في قناتنا على Telegram للدخول إلى الموقع.</p>
+    <a class="btn tg" href="https://t.me/+lVggsMJmM8c3NTRk" target="_blank" rel="noopener">✈ اشترك في القناة</a>
+    <button class="btn check" id="check">✓ تحققت من الاشتراك</button>
+    <small>التحقق الحقيقي من عضوية Telegram يحتاج Bot/Backend.</small>
+  </section>
+</main>
+
+<main id="site" class="site hidden">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+      <img src="logo.png" alt="PES A">
+      <div><b>PES "A"</b><small>عبدالرحمن جيمنج</small></div>
+    </div>
+    <button class="side-link active" data-section="home">🏠 <span>الرئيسية</span></button>
+    <button class="side-link" data-section="luck-section">🎲 <span>حظ جهازك</span></button>
+    <button class="side-link" data-section="team-section">⚽ <span>تقييم التشكيلة</span></button>
+    <button class="side-link" data-section="device-section">📱 <span>فحص الجهاز</span></button>
+    <button class="side-link" data-section="packages-section">🎁 <span>توقيت البكدجات</span></button>
+<button class="side-link" data-section="news-section">📰 <span>أخبار وتسريبات</span></button>
+    <button class="side-back" id="sideBack">↩ صفحة الاشتراك</button>
+  </aside>
+
+  <div class="page-area">
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="PES A">
+      <div><b>PES "A"</b><small>عبدالرحمن جيمنج</small></div>
+    </div>
+    <button class="mobile-menu" id="mobileMenu">☰</button>
+  </header>
+
+  <section class="hero content-section active-section" id="home">
+    <div>
+      <label>eFOOTBALL TOOLS</label>
+      <h2>حظك وتشكيلتك<br><em>في مكان واحد</em></h2>
+      <p>اختبر حظك اليوم وشوف أدوات PES "A".</p>
+    </div>
+    <img src="logo.png" alt="">
+  </section>
+
+  <section class="luck-section">
+    <div class="luck-head">
+      <div>
+        <span class="eyebrow">🎲 خط جهازك اليوم</span>
+        <h2>نسبة حظك</h2>
+      </div>
+      <strong id="luckStatus">جاهز</strong>
+    </div>
+
+    <div class="luck-card">
+      <span class="level">ممتاز</span>
+      <span class="device-label">🎮 حظ جهازك</span>
+
+      <div class="luck-wheel" aria-live="polite">
+        <div class="wheel-ring"></div>
+        <div class="ticks"></div>
+        <div class="luck-number">
+          <small>%</small>
+          <strong id="percent">--</strong>
+          <span>حظك اليوم</span>
+        </div>
+      </div>
+
+      <div class="luck-message" id="luckMessage">اضغط الزر لبدء اختبار حظك</div>
+      <button class="luck-button" id="luck">✨ اختبر حظي</button>
+    </div>
+  </section>
+
+
+  <section class="packages-section content-section" id="packages-section">
+    <div class="packages-header">
+      <span class="eyebrow">🎁 eFOOTBALL PACKAGES</span>
+      <h2>أفضل توقيت لفتح البكدجات</h2>
+      <p>أوقات مقترحة للفتح — استخدم الوقت المناسب لك.</p>
+    </div>
+
+    <div class="package-times">
+      <div class="time-card">
+        <span class="time-icon">🌅</span>
+        <strong>10:45 AM</strong>
+        <b>قبل الظهر</b>
+      </div>
+
+      <div class="time-card">
+        <span class="time-icon">☀️</span>
+        <strong>3:00 PM</strong>
+        <b>بعد الظهر</b>
+      </div>
+
+      <div class="time-card">
+        <span class="time-icon">🌙</span>
+        <strong>9:00 PM</strong>
+        <b>بعد العشاء</b>
+      </div>
+
+      <div class="time-card">
+        <span class="time-icon">🌌</span>
+        <strong>3:45 AM</strong>
+        <b>قبل الفجر</b>
+      </div>
+    </div>
+
+    <div class="package-note">
+      <span>💡</span>
+      <p>التوقيتات دي معروضة كأوقات مقترحة لفتح البكدجات، وليست ضمانًا للحصول على لاعب معين.</p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="content-section" id="device-section">
+      <i>📱</i>
+      <h3>افحص جهازك</h3>
+      <p>اكتب اسم جهازك.</p>
+      <input id="device" placeholder="مثال: TECNO CAMON 30 Pro">
+      <button class="small" id="deviceBtn">افحص الجهاز</button>
+      <div id="deviceOut"></div>
+    </article>
+
+    <article class="team-analyzer">
+      <div class="article-title">
+        <i>⚽</i>
+        <div>
+          <h3>تقييم تشكيلتك</h3>
+          <p>ارفع صورة حسابك وشوف تقييم التشكيلة.</p>
+        </div>
+      </div>
+
+      <label class="upload-box" for="squadImage">
+        <input id="squadImage" type="file" accept="image/*">
+        <span class="upload-icon">📸</span>
+        <b>ارفع صورة التشكيلة</b>
+        <small>PNG أو JPG • صورة واضحة للحساب</small>
+      </label>
+
+      <div class="preview-wrap hidden" id="previewWrap">
+        <img id="squadPreview" alt="معاينة صورة التشكيلة">
+        <button class="remove-image" id="removeImage" type="button">×</button>
+      </div>
+
+      <div class="style-select">
+        <label for="playStyle">أسلوب اللعب</label>
+        <select id="playStyle">
+          <option value="possession">استحواذ على الكرة</option>
+          <option value="quick">تمرير سريع</option>
+          <option value="counter">هجمات مرتدة</option>
+          <option value="long">كرات طويلة</option>
+          <option value="outwide">لعب على الأطراف</option>
+        </select>
+      </div>
+
+      <button class="small analyze-btn" id="team" type="button">🔍 تحليل التشكيلة</button>
+      <div class="analysis-loading hidden" id="analysisLoading">جاري تجهيز التحليل...</div>
+      <div class="team-result hidden" id="teamOut"></div>
+      <small class="analyzer-note">
+        النسخة الحالية تعرض الصورة وتجهز واجهة التحليل. التعرف الحقيقي على أسماء اللاعبين ومراكزهم يحتاج محرك رؤية/Backend.
+      </small>
+    </article>
+
+    <article class="news-card content-section" id="news-section">
+      <i>📰</i>
+      <h3>أخبار وتسريبات</h3>
+      <div class="news"><b>تحديثات eFootball</b><span>تابع الجديد أولاً بأول.</span></div>
+      <div class="news"><b>فعاليات وباكات</b><span>أهم الأشياء الجديدة في اللعبة.</span></div>
+      <div class="news"><b>PES "A"</b><span>محتوى وأدوات عبدالرحمن جيمنج.</span></div>
+    </article>
+  </section>
+
+  <footer>PES "A" • عبدالرحمن جيمنج</footer>
+  </div>
+</main>
+
+<script>
+const gate = document.getElementById('gate');
+const site = document.getElementById('site');
+
+document.getElementById('check').onclick = () => {
+  gate.classList.add('hidden');
+  site.classList.remove('hidden');
+};
+
+// زر الرجوع موجود داخل القائمة الجانبية.
+
+/* اختبار الحظ: الرقم النهائي يتحدد برمجياً، بينما الواجهة تعرض حركة دوران
+   وتغيير أرقام حتى تظهر النتيجة كاختبار حي. */
+let spinning = false;
+
+document.getElementById('luck').onclick = () => {
+  if (spinning) return;
+
+  spinning = true;
+  const number = document.getElementById('percent');
+  const button = document.getElementById('luck');
+  const status = document.getElementById('luckStatus');
+  const message = document.getElementById('luckMessage');
+
+  button.disabled = true;
+  button.textContent = '⏳ جاري الاختبار...';
+  status.textContent = 'جاري الحساب';
+  message.textContent = 'جاري تحديد نسبة حظك...';
+
+  const finalValue = Math.floor(Math.random() * 81) + 20; // 20% - 100%
+  const started = Date.now();
+  const duration = 2200;
+
+  const timer = setInterval(() => {
+    const elapsed = Date.now() - started;
+    const progress = Math.min(elapsed / duration, 1);
+    const wave = Math.floor(20 + Math.random() * 81);
+    number.textContent = wave;
+
+    if (progress >= 1) {
+      clearInterval(timer);
+      number.textContent = finalValue;
+      spinning = false;
+      button.disabled = false;
+      button.textContent = '🔄 اختبر حظي مرة أخرى';
+      status.textContent = finalValue >= 80 ? 'ممتاز' : finalValue >= 60 ? 'جيد جداً' : 'جيد';
+      message.textContent =
+        finalValue >= 85 ? '🔥 حظك عالي اليوم — بالتوفيق!' :
+        finalValue >= 70 ? '✨ نسبة حلوة — جرّب حظك!' :
+        '⚡ جرب مرة تانية وشوف النتيجة.';
+    }
+  }, 80);
+};
+
+document.getElementById('deviceBtn').onclick = () => {
+  const value = document.getElementById('device').value.trim();
+  document.getElementById('deviceOut').textContent =
+    value ? 'تم تسجيل الجهاز: ' + value : 'اكتب اسم جهازك أولاً.';
+};
+
+const sideLinks = document.querySelectorAll('.side-link');
+const contentSections = document.querySelectorAll('.content-section');
+const sidebar = document.getElementById('sidebar');
+
+function showSection(id) {
+  contentSections.forEach(section => {
+    section.classList.toggle('active-section', section.id === id);
+  });
+
+  sideLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.section === id);
+  });
+
+  sidebar.classList.remove('open');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+sideLinks.forEach(link => {
+  link.addEventListener('click', () => showSection(link.dataset.section));
+});
+
+document.getElementById('sideBack').onclick = () => {
+  site.classList.add('hidden');
+  gate.classList.remove('hidden');
+};
+
+document.getElementById('mobileMenu').onclick = () => {
+  sidebar.classList.toggle('open');
+};
+
+const squadImage = document.getElementById('squadImage');
+const previewWrap = document.getElementById('previewWrap');
+const squadPreview = document.getElementById('squadPreview');
+const removeImage = document.getElementById('removeImage');
+const analysisLoading = document.getElementById('analysisLoading');
+const teamOut = document.getElementById('teamOut');
+
+squadImage.addEventListener('change', () => {
+  const file = squadImage.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = e => {
+    squadPreview.src = e.target.result;
+    previewWrap.classList.remove('hidden');
+    teamOut.classList.add('hidden');
+  };
+  reader.readAsDataURL(file);
+});
+
+removeImage.onclick = () => {
+  squadImage.value = '';
+  squadPreview.src = '';
+  previewWrap.classList.add('hidden');
+  teamOut.classList.add('hidden');
+};
+
+document.getElementById('team').onclick = () => {
+  if (!squadImage.files[0]) {
+    teamOut.classList.remove('hidden');
+    teamOut.innerHTML = '<b>📸 ارفع صورة التشكيلة أولاً</b><span>يفضل أن تكون الصورة كاملة وواضحة.</span>';
+    return;
+  }
+
+  const styleNames = {
+    possession: 'استحواذ على الكرة',
+    quick: 'تمرير سريع',
+    counter: 'هجمات مرتدة',
+    long: 'كرات طويلة',
+    outwide: 'لعب على الأطراف'
+  };
+
+  const selected = document.getElementById('playStyle').value;
+  analysisLoading.classList.remove('hidden');
+  teamOut.classList.add('hidden');
+
+  setTimeout(() => {
+    analysisLoading.classList.add('hidden');
+    teamOut.classList.remove('hidden');
+    teamOut.innerHTML = `
+      <div class="result-head">
+        <b>جاهز لتحليل التشكيلة</b>
+        <strong>تحليل مبدئي</strong>
+      </div>
+      <p>أسلوب اللعب المختار: <b>${styleNames[selected]}</b></p>
+      <div class="result-grid">
+        <span>👤 اللاعبين <b>من الصورة</b></span>
+        <span>📍 المراكز <b>من الصورة</b></span>
+        <span>⚡ الأساليب <b>حسب اللاعب</b></span>
+      </div>
+      <small>للتعرف الفعلي تلقائياً على أسماء اللاعبين ومراكزهم من الصورة ثم حساب الانسجام والتقييم، يلزم ربط الموقع بخدمة تحليل صور/Backend.</small>
+    `;
+  }, 900);
+};
+</script>
+</body>
+</html>
